@@ -1,0 +1,187 @@
+.landing-page {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 100vh;
+  height: auto;
+  width: 100vw; 
+  max-width: 100vw;
+  overflow-x: hidden;
+  margin:0;
+  padding:5% 0 0 0; 
+  box-sizing: border-box;
+  background-color: #f8bb6a;
+}
+
+
+.landing-action{
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transform: translateX(0);
+  transition: all 1s ease-out;
+  transition-delay: 0.1s;
+}
+
+.landing-contain h1{
+  font-family: "Chewy", system-ui;
+  font-weight: 900;
+  font-size: 2.8rem;
+  margin-bottom: 15px;
+  color: #2d2d2d;
+}
+
+.title span{
+  color:#643120;
+}
+
+.landing-image{
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transform: translateX(0);
+  transition: all 1s ease-out;
+  transition-delay: 0.1s;
+}
+
+.landing-image img{
+  max-width: 100vh;
+  height: auto;
+}
+
+.animate-left {
+  transform: translateX(0);
+  opacity: 1;
+  animation: slideInLeft 1s ease-out forwards;
+}
+
+.animate-right {
+  transform: translateX(0);
+  opacity: 1;
+  animation: slideInRight 1s ease-out forwards;
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+
+.landing-contain h2{
+  color: #2d2d2d;
+  margin-bottom: 10px;
+  font-size: 1.6rem;
+  
+}
+
+.button-section{
+  display: flex;
+  justify-content: space-between;
+  width: 85%;
+  margin-top: 30px;
+}
+
+button{
+  width: 200px;
+  height: 50px;
+  border-radius: 25px;
+  border: none;
+  font-family: 'Baloo 2', cursive;
+  font-size: 1.2rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+button.action{
+  background-color: #643120;
+  color: #f8bb6a;
+}
+
+button.contact{
+  background-color: transparent;
+  color: #2d2d2d;
+  border: #643120 2px solid;
+}
+
+
+
+/*_____________________RESPONSIVE_______________________*/
+
+@media (max-width:769px) {
+  .landing-page{
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    width: 100vw; 
+    max-width: 100vw;
+
+  }
+  
+.landing-image{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+ 
+}
+.landing-image img{
+  width: 100%;
+}
+
+.landing-action{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+
+.landing-contain h1,
+.subtitle,
+.slogan,
+.accroche{
+  margin:0 30px;
+}
+
+.flex-contain{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.button-section{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 80%;
+  gap: 10px;
+}
+
+.button-section button {
+  width: 100%;
+  margin-bottom: 20px;
+}
+}
