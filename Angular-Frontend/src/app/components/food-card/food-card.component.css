@@ -1,0 +1,49 @@
+.card{
+    display: grid;
+    flex-direction: column;
+    box-shadow: 5px 10px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    width: 200px;
+    height: 300px;
+    margin: 10px;
+    
+}
+
+.card-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, #fff3e0 0%, #ffb74d 50%, #e65100 100%);
+    border-radius: 10px;
+}
+
+img{
+    height: 200px;
+}
+
+.card-body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 5px;
+
+}
+
+.card-title{
+    font-family: "Pacifico", system-ui;
+    font-size: 25px;
+    color: #643120;
+}
+
+
+.card-description{
+    color: #8b8b8b;
+}
+
+.card-price{
+    font-size: 20px;
+    font-weight: 600;
+}
