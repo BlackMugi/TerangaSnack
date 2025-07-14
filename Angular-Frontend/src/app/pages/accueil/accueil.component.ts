@@ -1,8 +1,11 @@
 import { Component, ElementRef, AfterViewInit, Renderer2 } from '@angular/core';
+import { FoodCardComponent } from '../../components/food-card/food-card.component';
 
 @Component({
   selector: 'app-accueil',
   templateUrl: './accueil.component.html',
+  standalone:true,
+  imports: [FoodCardComponent],
   styleUrls: ['./accueil.component.css']
 })
 export class AccueilComponent implements AfterViewInit {

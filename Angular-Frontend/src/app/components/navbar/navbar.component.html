@@ -1,17 +1,17 @@
 <header class="header">
-  <a href="#"><img src="img/logo2.jpeg" class="logo" alt="Logo"></a>
-  
+  <a routerLink="/"><img src="img/logo2.jpeg" class="logo" alt="Logo"></a>
+
   <div class="menu" (click)="toggleMenu()">
     <div class="line" [class.active]="isMenuOpen"></div>
     <div class="line" [class.active]="isMenuOpen"></div>
     <div class="line" [class.active]="isMenuOpen"></div>
   </div>
-  
+
   <nav class="navbar" [class.active]="isMenuOpen">
-    <a href="#">Accueil</a>
-    <a href="#">Nos Plats</a>
-    <a href="#">Nos Boissons</a>
-    <a href="#">Contact</a>
-    <a href="#">Se connecter</a>
+    <a routerLink="/">Accueil</a>
+    <a routerLink="/nos-plats">Nos Plats</a>
+    <a routerLink="/nos-boissons">Nos Boissons</a>
+    <a routerLink="/contact">Contact</a>
+    <a routerLink="/login">Se connecter</a>
   </nav>
 </header>
