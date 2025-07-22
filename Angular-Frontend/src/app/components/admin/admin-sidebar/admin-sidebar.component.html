@@ -1,0 +1,74 @@
+<aside class="sidebar"  [class.collapsed]="collapsed()">
+  <!-- le header de notre sidebar -->
+  <header class="sidebar-header">
+    <img src="img/logo2.jpeg" alt="logo Teranga Snack" class="header-logo" *ngIf="!collapsed()">
+    <button class="sidebar-toggle" (click)="toggleSidebar()">
+      <span class="material-symbols-rounded">
+        {{ collapsed() ? 'chevron_right' : 'chevron_left' }}
+      </span>
+    </button>
+  </header>
+
+  <!-- Le contenue de notre sidebar -->
+  <div class="sidebar-content">
+    <ul class="menu-list">
+
+      <!-- dashboard -->
+      <li class="menu-item">
+        <a routerLink="#" class="menu-link">
+          <span class="material-symbols-rounded">
+            dashboard
+          </span>
+          <span *ngIf="!collapsed()">Tableau de bord</span>
+        </a>
+      </li>
+
+      <!-- Commandes -->
+      <li class="menu-item">
+        <a routerLink="#" class="menu-link">
+          <span class="material-symbols-rounded">
+            shopping_bag
+          </span>
+          <span *ngIf="!collapsed()">Commandes</span>
+        </a>
+      </li>
+
+      <!-- Produits -->
+      <li class="menu-item">
+        <a routerLink="#" class="menu-link">
+          <span class="material-symbols-rounded">
+            box
+          </span>
+          <span *ngIf="!collapsed()">Produits</span>
+        </a>
+      </li>
+
+      <!-- Utilisateurs -->
+      <li class="menu-item">
+        <a routerLink="#" class="menu-link">
+          <span class="material-symbols-rounded">
+            group
+          </span>
+          <span *ngIf="!collapsed()">Utilisateurs</span>
+        </a>
+      </li>
+
+      <!-- Reduction -->
+      <li class="menu-item">
+        <a routerLink="#" class="menu-link">
+          <span class="material-symbols-rounded">
+            shape_line
+          </span>
+          <span *ngIf="!collapsed()">Reductions</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="sidebar-footer">
+    <button class="logout">
+      <span *ngIf="!collapsed()">Se déconnecter</span>
+      <span *ngIf="collapsed()" class="material-symbols-rounded">logout</span>
+    </button>
+  </div>
+</aside>

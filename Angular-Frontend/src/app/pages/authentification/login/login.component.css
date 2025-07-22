@@ -27,6 +27,7 @@
 }
 
 /* Groupes de champs */
+
 .form-group {
   display: flex;
   flex-direction: column;

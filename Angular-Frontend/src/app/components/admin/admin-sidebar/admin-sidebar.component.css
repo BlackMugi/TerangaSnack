@@ -1,0 +1,116 @@
+.sidebar{
+    position: sticky;
+    top: 0;
+    height: 100vb;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    background-color: #f8bb6a;
+    border-right: 1px solid #e49936;
+    box-shadow:  0 3px 9px rgba(255, 255, 255, .2);
+     transition: width 0.3s ease;
+}
+
+.sidebar header{
+   display: flex;
+    align-items: center; 
+   justify-content: space-between;
+   padding: 20px 18px;
+   border-bottom: 1px solid #e49936;
+}
+
+.sidebar-header img {
+    width: 110px;
+    object-fit: cover;
+    display: block;
+}
+
+.sidebar-header button{
+    height: 40px;
+    width: 40px;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    background: transparent;
+    color: #643120;
+    transition: .4s ease;
+}
+
+.sidebar-header button:hover{
+    background-color: #ffa52f;
+}
+
+.sidebar-toggle span{
+    font-size: 2rem;
+}
+
+
+.sidebar-content{
+    flex: 1;
+    padding: 20px 8px;
+    overflow: hidden auto;
+    scrollbar-width: thin;
+    scrollbar-color: #ffa52f transparent;
+}
+
+.sidebar-content ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.menu-item a{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    white-space: nowrap;
+    padding: 12px 15px;
+    color: #643120;
+    border-radius: 10px;
+    transition: .3s ease;
+    cursor: pointer;
+}
+
+.menu-item a:hover{
+    color: #f8bb6a;
+    background-color: #643120;
+}
+
+.sidebar-footer{
+    padding: 20px 18px;
+    white-space: nowrap;
+    border-top: 1px solid #e49936;
+}
+
+.sidebar-footer button{
+   width: 100%; 
+   min-height: 48px;
+   border-radius: 10px;
+   border: none;
+   cursor: pointer;
+   padding: 0 15px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background-color: #DC2626;
+   color: #fff;
+}
+
+.sidebar-footer button:hover{
+    background-color: #B91C1C ;
+}
+
+.sidebar.collapsed {
+  width: 80px;
+}
+
+
+
+.sidebar.collapsed .menu-link {
+  justify-content: center;
+  padding: 12px 0;
+}
