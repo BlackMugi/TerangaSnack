@@ -1,10 +1,15 @@
-<aside class="sidebar"  [class.collapsed]="collapsed()">
+<aside class="sidebar" [ngClass]="{'collapsed': collapsed && !isMobile, 'mobile-open': isMobile && mobileOpen}">
+
+
   <!-- le header de notre sidebar -->
   <header class="sidebar-header">
-    <img src="img/logo2.jpeg" alt="logo Teranga Snack" class="header-logo" *ngIf="!collapsed()">
-    <button class="sidebar-toggle" (click)="toggleSidebar()">
+    <a routerLink="/admin">
+      <img src="img/logo2.jpeg" alt="logo Teranga Snack" class="header-logo" *ngIf="!collapsed">
+    </a>
+     <button class="sidebar-toggle" (click)="onToggleSidebar()">
       <span class="material-symbols-rounded">
-        {{ collapsed() ? 'chevron_right' : 'chevron_left' }}
+
+        {{ collapsed ? 'chevron_right' : 'chevron_left' }}
       </span>
     </button>
   </header>
@@ -15,51 +20,62 @@
 
       <!-- dashboard -->
       <li class="menu-item">
-        <a routerLink="#" class="menu-link">
+        <a routerLink="/admin" class="menu-link">
           <span class="material-symbols-rounded">
             dashboard
           </span>
-          <span *ngIf="!collapsed()">Tableau de bord</span>
+          <span *ngIf="!collapsed">Tableau de bord</span>
         </a>
       </li>
 
       <!-- Commandes -->
       <li class="menu-item">
-        <a routerLink="#" class="menu-link">
+        <a routerLink="commandes" class="menu-link">
           <span class="material-symbols-rounded">
             shopping_bag
           </span>
-          <span *ngIf="!collapsed()">Commandes</span>
+          <span *ngIf="!collapsed">Commandes</span>
         </a>
       </li>
 
-      <!-- Produits -->
+      <!-- Nos Plats -->
       <li class="menu-item">
-        <a routerLink="#" class="menu-link">
+        <a routerLink="plats" class="menu-link">
           <span class="material-symbols-rounded">
-            box
+            dining
           </span>
-          <span *ngIf="!collapsed()">Produits</span>
+          <span *ngIf="!collapsed">Plats</span>
+        </a>
+      </li>
+
+
+      <!-- Nos Plats -->
+      <li class="menu-item">
+        <a routerLink="boissons" class="menu-link">
+          <span class="material-symbols-rounded">
+            water_full
+          </span>
+          <span *ngIf="!collapsed">Boissons</span>
         </a>
       </li>
 
       <!-- Utilisateurs -->
       <li class="menu-item">
-        <a routerLink="#" class="menu-link">
+        <a routerLink="utilisateurs" class="menu-link">
           <span class="material-symbols-rounded">
             group
           </span>
-          <span *ngIf="!collapsed()">Utilisateurs</span>
+          <span *ngIf="!collapsed">Utilisateurs</span>
         </a>
       </li>
 
       <!-- Reduction -->
       <li class="menu-item">
-        <a routerLink="#" class="menu-link">
+        <a routerLink="reductions" class="menu-link">
           <span class="material-symbols-rounded">
             shape_line
           </span>
-          <span *ngIf="!collapsed()">Reductions</span>
+          <span *ngIf="!collapsed">Reductions</span>
         </a>
       </li>
     </ul>
@@ -67,8 +83,11 @@
 
   <div class="sidebar-footer">
     <button class="logout">
-      <span *ngIf="!collapsed()">Se déconnecter</span>
-      <span *ngIf="collapsed()" class="material-symbols-rounded">logout</span>
+          <span class="material-symbols-rounded">
+            logout
+          </span>
+          <span *ngIf="!collapsed">Se Deconnecter</span>
     </button>
   </div>
+
 </aside>

@@ -1,7 +1,7 @@
 .sidebar{
-    position: sticky;
+    position: fixed;
     top: 0;
-    height: 100vb;
+    height: 100vh;
     width: 300px;
     display: flex;
     flex-direction: column;
@@ -14,7 +14,7 @@
 
 .sidebar header{
    display: flex;
-    align-items: center; 
+   align-items: center; 
    justify-content: space-between;
    padding: 20px 18px;
    border-bottom: 1px solid #e49936;
@@ -24,6 +24,7 @@
     width: 110px;
     object-fit: cover;
     display: block;
+    cursor: pointer;
 }
 
 .sidebar-header button{
@@ -53,6 +54,7 @@
     overflow: hidden auto;
     scrollbar-width: thin;
     scrollbar-color: #ffa52f transparent;
+    
 }
 
 .sidebar-content ul {
@@ -113,4 +115,48 @@
 .sidebar.collapsed .menu-link {
   justify-content: center;
   padding: 12px 0;
+}
+
+
+/* Sidebar mobile overlay */
+@media (max-width: 768px) {
+  .sidebar {
+    position: fixed;
+    left: -100%;
+    width: 250px !important;
+    z-index: 1000;
+    height: 100vh;
+    transition: left 0.3s ease;
+  }
+
+  .sidebar.mobile-open {
+    left: 0;
+  }
+
+  .sidebar-header img {
+    display: block;
+  }
+
+  .sidebar-footer {
+    display: block;
+  }
+
+  .mobile-toggle {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    z-index: 1100;
+    background-color: #f8bb6a;
+    border: none;
+    padding: 8px;
+    border-radius: 6px;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  }
+
+  .mobile-toggle span {
+    font-size: 28px;
+    color: #643120;
+  }
+
 }

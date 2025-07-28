@@ -1,6 +1,22 @@
 <div class="admin-layout">
-  <app-admin-sidebar></app-admin-sidebar> 
-  <main class="admin-content">
+<!-- Bouton burger visible uniquement sur mobile -->
+ <div class="sidemenu">
+    <button class="mobile-toggle" *ngIf="isMobile()" (click)="toggleSidebar()">
+      <span class="material-symbols-rounded">menu</span>
+    </button>
+ </div>
+
+  <!-- Sidebar avec gestion responsive -->
+  <app-admin-sidebar
+    [collapsed]="collapsed()"
+    [isMobile]="isMobile()"
+    [mobileOpen]="mobileSidebarOpen()"
+    (toggle)="toggleSidebar()"
+    (closeMobileSidebar)="closeMobileSidebar()"
+  ></app-admin-sidebar>
+
+  <!-- Contenu principal -->
+  <main class="admin-content" [ngStyle]="{ 'margin-left': sidebarWidth() }">
     <router-outlet></router-outlet>
   </main>
 </div>

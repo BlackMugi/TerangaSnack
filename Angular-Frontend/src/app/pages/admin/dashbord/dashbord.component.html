@@ -1,1 +1,44 @@
-<p>dashbord works!</p>
+<header class="dashboard-header">
+    <h2>Tableau de bord</h2>
+</header>
+
+<div class="subheader-content">
+    <div class="subheader">
+        <p>Tableau de bord</p>
+    </div>
+</div>
+
+<section class="card-container">
+  <div class="card card1">
+    <p class="card-title">Vente du jour</p>
+    <h1 class="card-value">204.850 <strong>F CFA</strong></h1>
+    <a routerLink="#" class="card-link">Voir plus</a>
+  </div>
+
+  <div class="card card2">
+    <p class="card-title">Commandes</p>
+    <h1 class="card-value">58</h1>
+    <a routerLink="#" class="card-link">Voir plus</a>
+  </div>
+
+  <div class="card card3">
+    <p class="card-title">Nouveaux clients</p>
+    <h1 class="card-value">17</h1>
+    <a href="#" class="card-link">Voir plus</a>
+  </div>
+
+  <div class="card card4">
+    <p class="card-title">Remboursements</p>
+    <h1 class="card-value">4</h1>
+    <a href="#" class="card-link">Voir plus</a>
+  </div>
+</section>
+
+<section class="chart-container">
+    <div class="chart-contain">
+        <app-vertical-bar-chart></app-vertical-bar-chart>
+    </div>
+    <div class="chart-contain">
+        <app-event-chart></app-event-chart>
+    </div>  
+</section>

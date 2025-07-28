@@ -1,16 +1,25 @@
-import { NgIf } from '@angular/common';
-import { Component, signal } from '@angular/core';
+import { NgIf, NgClass } from '@angular/common';
+import { Component, Input, Output,EventEmitter } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-admin-sidebar',
-  imports: [NgIf],
+  imports: [RouterModule, NgIf, NgClass],
   templateUrl: './admin-sidebar.component.html',
-  styleUrl: './admin-sidebar.component.css'
+  styleUrls: ['./admin-sidebar.component.css']
 })
 export class AdminSidebarComponent {
-  collapsed = signal(false); 
+  @Input() collapsed = false;
+  @Input() isMobile = false;
+  @Input() mobileOpen = false;
+  @Output() toggle = new EventEmitter<void>();
+  @Output() closeMobileSidebar = new EventEmitter<void>();
 
-  toggleSidebar() {
-    this.collapsed.update(value => !value);
+  onToggleSidebar() {
+    this.toggle.emit();
+  }
+
+  onCloseMobileSidebar() {
+    this.closeMobileSidebar.emit();
   }
 }

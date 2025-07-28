@@ -1,11 +1,18 @@
-import { Component } from '@angular/core';
+import { Component, signal, computed } from '@angular/core';
+import { VerticalBarChartComponent } from '../../../components/admin/charts/vertical-bar-chart/vertical-bar-chart.component';
+import { EventChartComponent } from '../../../components/admin/charts/event-chart/event-chart.component';
 
 @Component({
   selector: 'app-dashbord',
-  imports: [],
+  standalone: true,
+  imports: [VerticalBarChartComponent, EventChartComponent],
   templateUrl: './dashbord.component.html',
-  styleUrl: './dashbord.component.css'
+  styleUrls: ['./dashbord.component.css']
 })
 export class DashbordComponent {
+  refreshCharts = signal(false);
 
+  triggerChartResize() {
+    this.refreshCharts.update(v => !v); 
+  }
 }
