@@ -1,1 +1,94 @@
-<p>contact works!</p>
+<div class="contact-container">
+  <div class="contact-header">
+    <h1>Contactez <Strong>Teranga Snack</Strong></h1>
+    <p>Nous sommes à votre écoute pour toutes vos questions et commandes</p>
+  </div>
+
+  <div class="contact-content">
+    <div class="contact-info">
+      <div class="info-card">
+        <div class="icon">
+          <span class="material-symbols-rounded">
+            location_on
+          </span>
+        </div>
+        <h3>Adresse</h3>
+        <p>123 Avenue du Snack<br>75000 Paris, France</p>
+      </div>
+
+      <div class="info-card">
+        <div class="icon">
+          <span class="material-symbols-rounded">
+            phone_enabled
+          </span>
+        </div>
+        <h3>Téléphone</h3>
+        <p>+221 33 123 45 67</p>
+        <p>+221 77 123 45 67</p>
+      </div>
+
+      <div class="info-card">
+        <div class="icon">
+          <span class="material-symbols-rounded">
+            mail
+          </span>
+        </div>
+        <h3>Email</h3>
+        <p>{{"contact@teranga-snack.com"}}</p>
+        <p>{{"commande@teranga-snack.com"}}</p>
+      </div>
+
+      <div class="info-card">
+        <div class="icon">
+          <span class="material-symbols-rounded">
+            calendar_clock
+          </span>
+        </div>
+        <h3>Horaires</h3>
+        <p>Lundi - Vendredi: 10h - 22h</p>
+        <p>Samedi - Dimanche: 11h - 23h</p>
+      </div>
+    </div>
+
+    <div class="contact-form">
+      <h2>Envoyez-nous un message</h2>
+        <div class="form-group">
+          <label for="name">Nom complet</label>
+          <input type="text" id="name" formControlName="name" placeholder="Votre nom">
+        </div>
+        
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" formControlName="email" placeholder="Votre email">
+        </div>
+        
+        <div class="form-group">
+          <label for="phone">Téléphone</label>
+          <input type="tel" id="phone" formControlName="phone" placeholder="Votre numéro">
+        </div>
+        
+        <div class="form-group">
+          <label for="subject">Sujet</label>
+          <select id="subject" formControlName="subject">
+            <option value="" disabled selected>Sélectionnez un sujet</option>
+            <option value="commande">Commande</option>
+            <option value="question">Question</option>
+            <option value="livraison">Livraison</option>
+            <option value="autre">Autre</option>
+          </select>
+        </div>
+        
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" formControlName="message" rows="5" placeholder="Votre message..."></textarea>
+        </div>
+        
+        <button type="submit" class="submit-btn">Envoyer le message</button>
+    </div>
+  </div>
+
+  <div class="contact-map">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1929.6619053852016!2d-17.449842861444804!3d14.694271296450808!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xec172f1c0598101%3A0xad8f54e0b0af022b!2zTUhWMitHUTcgUGxhY2UgZGUgbOKAmW9iw6lsaXNxdWUsIERha2Fy!5e0!3m2!1sfr!2ssn!4v1753967972688!5m2!1sfr!2ssn"
+        width="1200" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+</div>
