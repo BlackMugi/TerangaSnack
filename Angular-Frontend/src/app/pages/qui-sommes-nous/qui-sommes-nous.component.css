@@ -1,0 +1,294 @@
+.about-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 2rem;
+  color: #333;
+}
+
+.header-section {
+  text-align: center;
+  margin-bottom: 4rem;
+  padding: 2rem;
+  background-color: #f8bb6a;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.header-section h1{
+  font-size: 2.5rem;
+  color: #643120;
+  margin-bottom: 2rem;
+}
+
+.intro img{
+  width: 450px;
+}
+
+h1, h2, h3 {
+  color: #643120;
+}
+
+/* Section Hero */
+.hero-section {
+  margin-bottom: 50px;
+}
+
+.hero-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.hero-text {
+  padding: 20px;
+  text-align: center;
+}
+
+.hero-text h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+}
+
+/* Section Histoire */
+.history-section {
+  margin: 60px 0;
+}
+
+.section-content {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.text-content {
+  flex: 1;
+}
+
+.text-content h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.text-content p {
+  margin-bottom: 15px;
+}
+
+.history-image {
+  flex: 1;
+  max-width: 500px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Section Philosophie */
+.philosophy-section {
+  margin: 80px 0;
+  text-align: center;
+}
+
+.philosophy-section h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+
+.philosophy-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.philosophy-card {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+
+.philosophy-card:hover {
+  transform: translateY(-10px);
+}
+
+.philosophy-card .icon {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.philosophy-card h3 {
+  margin-bottom: 15px;
+  color: #643120;
+}
+
+.team-image {
+  width: 100%;
+  max-height: 500px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-top: 30px;
+}
+
+/* Section Équipe */
+.team-section {
+  margin: 80px 0;
+  text-align: center;
+}
+
+.team-section h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.team-member img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  border: 5px solid #f8bb6a;
+}
+
+.team-member h3 {
+  margin-bottom: 5px;
+  color: #643120;
+}
+
+.team-member p {
+  color: #666;
+}
+
+/* Section Valeurs */
+.values-section {
+  margin: 80px 0;
+}
+
+.values-content {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.values-image {
+  flex: 1;
+  max-width: 500px;
+  border-radius: 10px;
+}
+
+.values-text {
+  flex: 1;
+}
+
+.values-text h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.values-text ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.values-text li {
+  margin-bottom: 15px;
+  padding-left: 30px;
+  position: relative;
+}
+
+.values-text li:before {
+  content: "•";
+  color: #f8bb6a;
+  font-size: 1.5rem;
+  position: absolute;
+  left: 0;
+  top: -5px;
+}
+
+/* Section Engagement */
+.commitment-section {
+  margin: 80px 0;
+  text-align: center;
+}
+
+.commitment-section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.commitment-section p {
+  margin-bottom: 40px;
+  font-size: 1.1rem;
+}
+
+.commitment-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.commitment-card {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.commitment-icon {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.products-image {
+  width: 100%;
+  max-height: 500px;
+  border-radius: 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-text {
+    left: 20px;
+    bottom: 20px;
+    max-width: 80%;
+  }
+
+  .section-content, .values-content {
+    flex-direction: column;
+  }
+
+  .history-image, .values-image {
+    max-width: 100%;
+    order: -1;
+  }
+
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-text {
+    padding: 15px;
+    left: 10px;
+    bottom: 10px;
+  }
+
+  .hero-text h1 {
+    font-size: 1.5rem;
+  }
+
+  .hero-text p {
+    font-size: 1rem;
+  }
+}

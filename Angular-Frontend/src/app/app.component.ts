@@ -4,7 +4,7 @@ import { filter } from 'rxjs/operators';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { RouterOutlet } from '@angular/router';
-import { NgIf, NgClass } from '@angular/common';
+import { NgIf, NgClass, ViewportScroller  } from '@angular/common';
 
 @Component({
   selector: 'app-root',
@@ -21,11 +21,12 @@ export class AppComponent {
 
   isAdminRoute = computed(() => this.currentUrl().startsWith('/admin'));
 
-  constructor(private router: Router) {
+  constructor(private router: Router, private viewportScroller: ViewportScroller) {
     this.router.events
       .pipe(filter(event => event instanceof NavigationEnd))
       .subscribe((event: NavigationEnd) => {
         this.currentUrl.set(event.urlAfterRedirects);
+        this.viewportScroller.scrollToPosition([0, 0]);
       });
   }
 

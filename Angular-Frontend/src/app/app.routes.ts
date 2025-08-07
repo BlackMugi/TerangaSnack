@@ -5,7 +5,11 @@ import { NosBoissonsComponent } from './pages/nos-boissons/nos-boissons.componen
 import { ContactComponent } from './pages/contact/contact.component';
 import { LoginComponent } from './pages/authentification/login/login.component';
 import { RegisterComponent } from './pages/authentification/register/register.component';
-import { DashbordComponent } from './pages/admin/dashbord/dashbord.component';
+import { AProposComponent } from './pages/a-propos/a-propos.component';
+import { QuiSommesNousComponent } from './pages/qui-sommes-nous/qui-sommes-nous.component';
+import { FaqComponent } from './pages/faq/faq.component';
+import { MentionsLegalesComponent } from './pages/mentions-legales/mentions-legales.component';
+
 
 
 
@@ -18,7 +22,11 @@ export const routes: Routes = [
     {path:'contact', component: ContactComponent},
     {path:'login', component: LoginComponent},
     {path:'register', component: RegisterComponent},
-    {path:'admin/dashboard', component: DashbordComponent},
+    {path:'à-propos', component: AProposComponent},
+    {path:'qui-sommes-nous', component: QuiSommesNousComponent},
+    {path:'foire-aux-questions', component: FaqComponent},
+    {path:'mentions-légales', component: MentionsLegalesComponent},
+
 
 
 
